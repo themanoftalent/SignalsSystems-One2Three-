@@ -6,11 +6,12 @@ t= linspace(0,2*pi,1000);
 x= 3*cos(2*pi*t) + 2*sin(4*pi*t);
 %1-a)Sketch the waveform of x(t) over one period.
 figure;
-plot(t,x);
+
 xlabel('Time (s)');
 ylabel('Amplitude');
 title('Waveform of x(t)');
 grind on;
+plot(t,x);
 
 %1-b)Determine the frequency components present in x(t).
 fprintf('2-) Formula, Xcos (2pi a t) + Y sin (2pi b t).\n'); %Formula of frequency components according to Fourier transform
