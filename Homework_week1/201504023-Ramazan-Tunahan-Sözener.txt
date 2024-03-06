@@ -1,0 +1,73 @@
+1.question part1
+
+t = 0:0.001:1;
+x = 3*cos(2*pi*t) + 2*sin(4*pi*t);
+
+plot(t, x)
+title('Waveform of x(t) = 3cos(2\pi t) + 2sin(4\pi t)')
+xlabel('Time (s)')
+ylabel('Amplitude')
+grid on
+
+1.question part2
+
+% Define the time vector from 0 to 1 with a suitable interval
+t = 0:0.001:1;
+% Calculate the function values for each time point
+x = 3*cos(2*pi*t) + 2*sin(4*pi*t);
+% Calculate the FFT
+Fs = 1 / (t(2) - t(1));  % Sampling frequency
+L = length(t);           % Length of the signal
+f = Fs*(0:(L/2))/L;       % Frequency vector
+
+Y = fft(x);
+P2 = abs(Y/L);
+P1 = P2(1:L/2+1);
+% Plot the single-sided amplitude spectrum
+figure;
+plot(f, P1)
+title('Single-Sided Amplitude Spectrum of x(t)')
+xlabel('Frequency (Hz)')
+ylabel('Amplitude')
+grid on
+
+2.question part1
+
+x = [1, -2, 3, -4, 5];
+signal_length = length(x);
+disp(['Length of the signal x(n): ', num2str(signal_length)]);
+
+%	5
+
+2.question part2
+
+x = [1, -2, 3, -4, 5];
+value_at_n3 = x(4);
+disp(['Value of x[3]: ', num2str(value_at_n3)]);
+
+%	-4
+
+
+
+2.question part3
+
+x = [1, -2, 3, -4, 5];
+sum_of_elements = sum(x);
+disp(['Sum of all elements in the signal: ', num2str(sum_of_elements)]);
+
+%	3
+
+
+2.question part4
+
+x = [1, -2, 3, -4, 5];
+energy = sum(abs(x).^2);
+disp(['Energy of the signal: ', num2str(energy)]);
+
+%   	55
+
+
+
+
+
+
