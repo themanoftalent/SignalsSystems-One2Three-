@@ -1,0 +1,43 @@
+% Problem 1: Continuous-Time Signals and Systems
+
+% 1. Sinyalin bir periyot boyunca dalga formunu çizme
+t = 0:0.001:2*pi; % Time vector from 0 to 2*pi with a step of 0.001
+x = 3*cos(2*t) + 2*sin(4*t); % Signal x(t)
+
+plot(t, x); % Plot the signal
+title('Signal x(t)'); % Add a title
+xlabel('t'); % Label the horizontal t-axis
+ylabel('x(t)'); % Label the vertical x(t)-axis
+grid on; % Display a grid
+
+
+% 2. x(t) sinyalinin frekans bileşenlerini belirleme
+f_components = [2, 4]; % Sinyalin frekans bileşenleri (Hz)
+disp('Sinyalin frekans bileşenleri:');
+disp(f_components);
+
+% 3. x(t) sinyalinin bir periyot boyunca ortalama gücünü hesaplama
+T = 2*pi; % Bir periyotun uzunluğu
+P_avg = (1/T) * trapz(t, x.^2); % 1 periyot boyunca ortalama güç hesabı
+disp(['Sinyalin bir periyot boyunca ortalama gücü: ', num2str(P_avg)]);
+
+% Problem 2: Discerete-Time Signals and Systems
+
+% Verilen sinyalin tanımı
+x = [1, -2, 3, -4, 5]; % Sinyal değerleri
+
+% 1. Sinyalin uzunluğunu bulma
+signal_length = length(x);
+disp(['Sinyalin uzunluğu: ', num2str(signal_length)]);
+
+% 2. x[3] değerini bulma
+x_3 = x(3);
+disp(['x[3] değeri: ', num2str(x_3)]);
+
+% 3. Sinyalin tüm elemanlarının toplamını bulma
+sum_of_elements = sum(x);
+disp(['Sinyalin tüm elemanlarının toplamı: ', num2str(sum_of_elements)]);
+
+% 4. Sinyalin enerjisini hesaplama
+energy = sum(abs(x).^2);
+disp(['Sinyalin enerjisi: ', num2str(energy)]);
