@@ -1,0 +1,119 @@
+t = linspace(0, 1, 1000); 
+
+x_ct = 3*cos(2*pi*t) + 2*sin(4*pi*t);
+
+
+
+% Plot continuous-time signal waveform
+
+subplot(3,1,1);
+
+plot(t, x_ct);
+
+xlabel('Time (s)');
+
+ylabel('Amplitude');
+
+title('Continuous Signal');
+
+
+
+% Compute and plot continuous-time signal frequency spectrum
+
+X_ct = fft(x_ct);
+
+f_ct = linspace(0, 1, length(X_ct));
+
+mag_ct = abs(X_ct);
+
+subplot(3,1,2);
+
+plot(f_ct, mag_ct);
+
+xlabel('Frequency (Hz)');
+
+ylabel('Magnitude');
+
+title('Frequency Spectrum');
+
+
+
+% Compute average power of continuous-time signal
+
+P_ct = trapz(t, x_ct.^2) / 1;
+
+
+
+disp(['Average power of continuous signal: ', num2str(P_ct)]);
+
+
+
+% Compute frequency components of the continuous-time signal
+
+X = 3*cos(2*pi*t) + 2*sin(4*pi*t);
+
+X_fft = fft(X);
+
+Fs = 1000; 
+
+N = length(X_fft); 
+
+frequencies = Fs * (0:(N-1)) / N; 
+
+
+
+% Find the peaks in the magnitude spectrum
+
+[~, idx] = findpeaks(abs(X_fft), 'SortStr', 'descend');
+
+
+
+% Display the frequencies corresponding to the peaks
+
+disp('Frequency components present in the signal:');
+
+for i = 1:min(5, length(idx)) % Display up to 5 highest peaks
+
+    freq = frequencies(idx(i));
+
+    disp(['Peak ', num2str(i), ': ', num2str(freq), ' Hz']);
+
+end
+
+% Second Question
+% Given discrete-time signal
+
+x = [1, -2, 3, -4, 5];
+
+
+
+% Length of the signal
+
+length_x = length(x);
+
+disp(['Length of the signal: ', num2str(length_x)]);
+
+
+
+% Value of x(3)
+
+x_3 = x(3);
+
+disp(['Value of x(3): ', num2str(x_3)]);
+
+
+
+% Sum of all elements in the signal
+
+sum_x = sum(x);
+
+disp(['Sum of all elements in the signal: ', num2str(sum_x)]);
+
+
+
+% Compute energy of the signal
+
+energy_x = sum(abs(x).^2);
+
+disp(['Energy of the signal: ', num2str(energy_x)]);
+
