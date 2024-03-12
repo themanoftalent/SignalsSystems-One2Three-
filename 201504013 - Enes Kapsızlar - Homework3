@@ -1,0 +1,54 @@
+
+% 1.Variable Assignment and Output:
+
+x=5;
+y=3;
+mul=x*y;
+disp(["multiple of x and y: " , num2str(mul)]);
+
+% 2.Simple Arithmetic Operations:
+
+a=10;
+b=3;
+sum=a+b;
+diff=a-b;
+mult=a*b;
+div=a/b;
+disp(["sum of a and b: " , num2str(sum)]);
+disp(["different of a and b: " , num2str(diff)]);
+disp(["multiple of a and b: " , num2str(mult)]);
+disp(["division of a and b: " , num2str(div)]);
+
+
+% 3.Conditional Statement:
+
+number = input("enter the number: \n");
+if mod(number, 2) == 0
+    disp("number is even.");
+else
+    disp("number is odd.");
+    end
+
+% 4.Looping: 
+
+c=3;
+disp("First 10 multiples by 3: ")
+for i = 10:-1:1
+    loop = c*i;
+    disp(["3 * ", num2str(i) , " = ", num2str(loop)]);
+end
+
+% 5. Vector Operation:
+
+% v = [1, 2, 3, 4, 5];
+% v = 1:1:5;
+
+v = 1:5;
+% sumtotal = sum(v);
+% disp(["sum of the vector: ", num2str(sumtotal)]);
+
+ sum = 0;
+ for i = 1:length(v)
+ sum = sum + v(i);
+ end
+ disp(["sum of the vector: ", num2str(sum)]);
