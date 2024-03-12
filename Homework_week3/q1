@@ -1,0 +1,23 @@
+% Define the time variable
+syms t;
+
+% Define the signal
+z_t = 3*cos(2*t) + 2*sin(4*t);
+
+% Plot the waveform of z(t) over one period
+t_values = linspace(0, pi, 100);
+z_values = eval(subs(z_t, t, t_values));
+figure;
+plot(t_values, z_values);
+xlabel('Time (t)');
+ylabel('z(t)');
+title('Waveform of z(t) over one period');
+
+% Determine the frequency components present in z(t)
+f1 = 1/(2*pi); % Frequency component from cos(2t)
+f2 = 2/(2*pi); % Frequency component from sin(4t)
+fprintf('Frequency components present in z(t): %.4f, %.4f\n', f1, f2);
+
+% Compute the average power of z(t) over one period
+avg_power = (1/pi) * int(abs(z_t)^2, t, 0, pi);
+fprintf('Average power of z(t) over one period: %.2f\n', avg_power);

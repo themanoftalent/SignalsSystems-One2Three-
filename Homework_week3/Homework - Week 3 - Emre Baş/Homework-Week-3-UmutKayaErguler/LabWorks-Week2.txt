@@ -1,0 +1,70 @@
+1-) 2 POWER OF 5
+
+x = power(5,2);
+fprintf("2 Power of 5: " + x);
+
+% Output: 2 Power of 5: 25
+
+===============================================================================
+
+2-) SQRT OF INPUT NUMBER
+
+y = input("Enter a number: ");
+x = sqrt(y);
+disp("Sqrt of " + y + ": " + x);
+
+===============================================================================
+
+3-) LENGTH OF INPUT
+
+y = input("Enter a word: ", "s");
+x = strlength(y);
+disp("Length of " + y + ": " + x);
+
+===============================================================================
+
+4-) SIN(PI/2)
+
+x  = sin(pi/2);
+disp(x);
+
+===============================================================================
+
+5-) PRINT ALL DECIMALS
+
+x  = 12458.36 * 6;
+fprintf("%.20f\n", x);
+
+===============================================================================
+
+6-) SUM OF NUMBERS
+
+number1 = input("Enter number 1: ");
+number2 = input("Enter number 2: ");
+
+total = number1 + number2;
+disp("Sum of numbers: " + total); 
+
+===============================================================================
+
+7-) FORMAT EXAMPLES
+
+x = 123456789.123456789;
+
+
+disp("format long:")
+format long
+disp(x)
+
+disp("format short:")
+format short
+disp(x)
+
+disp("format long e:")
+format long e
+disp(x)
+
+disp("format short e:")
+format short e
+disp(x)
+
