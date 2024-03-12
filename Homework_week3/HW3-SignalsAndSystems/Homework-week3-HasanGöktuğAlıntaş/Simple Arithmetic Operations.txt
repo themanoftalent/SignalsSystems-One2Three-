@@ -1,0 +1,22 @@
+ x=10;
+ y=3;
+ 
+ %Sum
+ sum=x+y;
+ disp(sum);
+    13
+
+ %diff
+ diff=x-y;
+ disp(diff);
+     7
+
+ %Mul
+ mul=x*y;
+ disp(mul);
+    30
+
+ %Quotion
+ quo=x/y;
+ disp(quo);
+    3.3333

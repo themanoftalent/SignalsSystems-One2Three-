@@ -1,0 +1,4 @@
+x = 5;
+y = 3;
+result = x * y;
+disp(['The result of x multiplied by y is: ' num2str(result)]);

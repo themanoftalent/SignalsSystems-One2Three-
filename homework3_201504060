@@ -1,0 +1,65 @@
+%1
+
+fprintf('Question 1 \n' );
+
+
+x = 5;
+y = 3;
+result = x*y;
+disp(['The value of the x is: ', num2str(x)]);
+disp(['The value of the y is: ', num2str(y)]);
+disp(['The value of the result is: ', num2str(result)]);
+
+%--------------------
+fprintf('Question 2 '); 
+
+
+%2
+num1 = 10;
+num2 = 3; 
+sums = num1 + num2;
+dif= num1 - num2;
+mul = num1 * num2;
+div = num1/ num2;
+
+
+disp(['num1 + num2 = ', num2str(sums)]);
+disp(['num1 - num2 = ', num2str(dif)]);
+disp(['num1 * num2 = ', num2str(mul)]);
+disp(['num1 / num2 = ', num2str(div)]);
+
+
+%--------------------
+fprintf('Question 3 ' ); 
+
+
+%3
+num = input('Enter a number: ');
+
+if mod(num, 2) == 0
+    disp([num2str(num), ' is Even']);
+else
+    disp([num2str(num), ' is Odd']);
+end
+
+%-------------------
+fprintf('Question 4 '  ); 
+
+%4
+i = input('Enter a number: ');
+
+for j = 1:10
+    multipleOfNum= i * j; 
+    disp(multipleOfNum); 
+end
+
+%-----------------
+%5
+fprintf('Question 5 '); 
+
+v = [1 2 3 4 5];
+disp(v);
+sumVctr= sum(v);
+disp(sumVctr);
+
+

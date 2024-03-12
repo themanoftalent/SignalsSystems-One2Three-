@@ -1,0 +1,48 @@
+% Continuous-time signal x(t) = 3cos(2πt) + 2sin(4πt)
+
+% 1) Plot the waveform of x(t) over one period
+t = linspace(0, 1, 1000); % 1000 points from 0 to 1
+x = 3*cos(2*pi*t) + 2*sin(4*pi*t);
+figure;
+plot(t, x, 'b', 'LineWidth', 1.5);
+xlabel('Time (seconds)');
+ylabel('Amplitude');
+title('Waveform of x(t) = 3cos(2\pi t) + 2sin(4\pi t)');
+grid on;
+
+% 2) Determine the frequency components present in x(t)
+% x(t) = 3cos(2πt) + 2sin(4πt)
+% f1 = 1 / T1 = 1 / 2π, f2 = 1 / T2 = 1 / 4π
+f1 = 1 / (2 * pi);
+f2 = 1 / (4 * pi);
+fprintf('Frequency components present in x(t):\n');
+fprintf('f1 = %.4f Hz\n', f1);
+fprintf('f2 = %.4f Hz\n', f2);
+
+% 3) Compute the average power of x(t) over one period
+% Power = 1 / T * integral(x(t)^2 dt)
+% Integral over one period (from 0 to 1)
+T = 1; % One period
+power = (1 / T) * trapz(t, x.^2);
+fprintf('Average power of x(t) over one period: %.4f\n', power);
+
+
+% Given discrete-time signal x[n] = {1,-2,3,-4,5}
+
+% 1) Determine the length of the signal
+x = [1, -2, 3, -4, 5];
+signal_length = length(x);
+fprintf('Length of the signal: %d\n', signal_length);
+
+% 2) Find the value of x[3]
+x_3 = x(3);
+fprintf('Value of x[3]: %d\n', x_3);
+
+% 3) Compute the sum of all elements in the signal
+sum_elements = sum(x);
+fprintf('Sum of all elements in the signal: %d\n', sum_elements);
+
+% 4) Calculate the energy of the signal
+% Energy = sum(x[n]^2)
+energy = sum(x.^2);
+fprintf('Energy of the signal: %d\n', energy);
