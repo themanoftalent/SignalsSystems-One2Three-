@@ -1,0 +1,51 @@
+1. Variable Assignment and Output: Write a MATLAB script that assigns the value 5 to a variable x and the value 3 to a variable y, then displays the result of x multiplied by y.
+
+x = 5;
+y = 3;
+result = x * y;
+disp(result)
+
+2. Simple Arithmetic Operations: Create a MATLAB script that calculates and displays the sum, difference, product, and quotient of two numbers 10 and 3.
+
+x = 10;
+y = 3;
+sum = x + y;
+difference1 = x - y;
+difference2 = y - x;
+product = x * y;
+quotient1 = x / y;
+quotient2 = y / x;
+
+disp("Sum of x and y: " + sum + "\n");
+disp("Difference is 3 from 10: " + difference1 + "\n");
+disp("Difference is 10 from 3: " + difference2 + "\n");
+disp("Product: " + product + "\n");
+disp("Division 10 divided by 3: " + quotient1 + "\n");
+disp("Division 3 divided by 10: " + quotient2 + "\n");
+
+3. Conditional Statement: Write a MATLAB script that takes an input value num and prints "Even" if num is even, and "Odd" if num is odd.
+
+num = input("Please enter a number: ");
+if mod(num, 2) == 0
+	disp("Number is Even");
+else
+	disp("Number is Odd");
+end
+
+4. Looping: Write a MATLAB script that uses a loop to display the first 10 multiples of 3.
+
+for i = 1:10
+    multiple = 3 * i;
+    disp(["Multiple of 3 #" num2str(i) ": " num2str(multiple)]);
+end
+
+5. Vector Operation: Create a MATLAB script that defines a vector v containing the numbers 1 through 5, then calculates and displays the sum of the elements in v.	
+
+v = [1, 2, 3, 4, 5];
+sum = 0;
+
+for i = 1:length(v)
+    sum = sum + v(i); 
+end
+
+disp("Sum of elements in v: " + sum);
