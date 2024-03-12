@@ -1,0 +1,83 @@
+%Problem 1
+
+% Time vector from 0 to 20 with step of 0.0001
+t = 0:0.0001:20;
+
+% Signal definition
+x = 3 * cos(2*pi*t) + 2*sin(4*pi*t);
+
+% Square of the signal
+x2 = x.^2;
+
+% Sampling frequency and signal length
+Fs = 1/0.0001; % Hz, derived from the step size in 't'
+N = length(x); % Length of the signal
+
+% Fourier transform and frequency vector creation
+X = fft(x); % FFT of signal
+f = (0:N-1)*(Fs/N); % Frequency vector
+
+% Power spectrum calculation
+P = abs(X).^2/N; % Power spectrum of the signal
+
+%1.1 Sketch the waveform of x(t) over one period.
+% Plotting the waveform
+figure;
+plot(t,x);
+title('x(t) = 3cos(2πt) + 2sin(4πt) Waveform');
+xlabel('Time(t)');
+ylabel('x(t)');
+grid on;
+
+%1.2 Determine the frequency components present in x(t).
+% Plotting the frequency spectrum
+figure;
+plot(f(1:floor(N/2)), P(1:floor(N/2)))
+title('x(t) = 3cos(2*pi*t) + 2sin(4*pi*t) Frequency Spectrum')
+xlabel('Frequency (Hz)')
+ylabel('|P(f)|^2')
+grid on;
+
+%1.3 Compute the average power of x(t) over one period.
+% Numerically calculating the average power
+dt = t(2) - t(1); % Time step difference
+P_avg = trapz(t, x2) / (t(end) - t(1)); % Average power using trapezoidal integration
+
+% Displaying the result
+disp(['Average Power: ', num2str(P_avg)]);
+
+%------------------------------
+
+%Problem 2
+
+% Define the signal as an array
+n = [1, 2, 3, 4, 5];
+
+
+%2.1 Determine the length of the signal.
+% Calculate the length of the signal
+signal_length = length(n);
+
+% Display the length of the signal
+disp(['Sinyalin Uzunluğu: ', num2str(signal_length)]);
+
+%2.2 Determine the length of the signal.
+% Access the third element of the array
+x3 = n(3);
+
+% Display the value of the third element
+disp(['x[3] değeri: ', num2str(x3)]);
+
+%2.3 Compute the sum of all elements in the signal.
+% Calculate the sum of the elements in the array
+total_sum = sum(n);
+
+% Display the total sum of the elements
+disp(['Elemanların Toplamı: ', num2str(total_sum)]);
+
+%2.4 Calculate the energy of the signal.
+% Calculate the energy of the signal (sum of squares of the elements)
+energy = sum(n.^2);
+
+% Display the energy of the signal
+disp(['Sinyalin Enerjisi: ', num2str(energy)]);

@@ -1,0 +1,10 @@
+% Initialize a variable to store the current multiple
+multiple = 3;
+
+% Loop 
+disp('First 10 multiples of 3:');
+for i = 1:10
+    disp(['Multiple ', num2str(i), ': ', num2str(multiple)]);
+    % Increment the current multiple by 3 for the next iteration
+    multiple = multiple + 3;
+end
