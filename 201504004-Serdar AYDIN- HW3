@@ -1,0 +1,45 @@
+% Questıon 1
+x=3;
+y=5;
+mult=x*y;
+fprintf("Result of x multiplied by y is:%d \n", mult)
+---------------------------
+
+%Queatıon2
+num1=10;
+num2=3;
+sum=num1+num2;
+mul=num1*num2;
+diff=num1-num2;
+div=num1/num2;
+
+fprintf("Sum of numbers:%d \n", sum);
+fprintf("Difference of numbers:%d \n", diff);
+fprintf("Product of numbers:%d \n", mul);
+fprintf("Quotient of numbers:%d \n", div)
+
+---------------------------
+
+% Questıon 3
+    num=input("Enter a number: \n ");
+    a=mod(num,2);
+    if a == 0
+    disp("Entered value is even.");
+else
+    disp("Entered value is odd.");
+end
+---------------------------
+
+%Question 4
+for i=1:1:10
+disp(i*3);
+end
+
+--------------------------
+%Question 5
+
+v = [1, 2, 3, 4, 5];
+sum = sum(v);
+fprintf('Sum of the elements in v: %d\n', sum);
+
+--------------------------
