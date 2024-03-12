@@ -1,0 +1,44 @@
+% QUESTIN 1
+clc,clearvars
+x = 5;
+y = 3;
+res = x * y;
+disp(res);
+
+%% QUESTION 2 
+clc,clearvars
+x = 10;
+y = 3;
+
+summation = x + y;
+disp('The sum is: ',num2str(summation));
+
+difference = x - y;
+disp(difference);
+
+product = x * y;
+disp(product);
+
+quotient = x/y;
+disp(quotient);
+
+%% QUESTION 3 
+clc,clearvars
+value = input('Enter a number:');
+disp(['you enterd: ',num2str(value)]);
+if mod(value, 2) == 0
+else 
+ disp('ODD');
+end
+
+%% QUESTION 4
+clc,clearvars
+for i = 1:10
+  disp(i*3);
+end
+
+%% QUESTION 5
+clc,clearvars
+V = 1:5;
+res = sum(V);
+disp(res);
