@@ -1,0 +1,64 @@
+QUESTION 1)
+% Assigning values to variables
+x = 5;
+y = 3;
+
+% Displaying the result of x multiplied by y
+result = x * y;
+disp(['The result of x multiplied by y is: ' num2str(result)]);
+
+QUESTION 2)
+% Define the numbers
+num1 = 10;
+num2 = 3;
+
+% Calculate the sum
+sum_result = num1 + num2;
+
+% Calculate the difference
+difference_result = num1 - num2;
+
+% Calculate the product
+product_result = num1 * num2;
+
+% Calculate the quotient
+quotient_result = num1 / num2;
+
+% Display the results
+disp(['Sum: ' num2str(sum_result)]);
+disp(['Difference: ' num2str(difference_result)]);
+disp(['Product: ' num2str(product_result)]);
+disp(['Quotient: ' num2str(quotient_result)]);
+
+QUESTION 3)
+% Take input from the user
+num = input('Enter a number: ');
+
+% Check if the number is even or odd
+if mod(num, 2) == 0
+    disp('Even');
+else
+    disp('Odd');
+end
+
+QUESTION 4)
+% Define the number for which multiples are calculated
+num = 3;
+
+% Display the first 10 multiples of the number
+disp('The first 10 multiples of 3 are:');
+for i = 1:10
+    multiple = num * i;
+    disp(['Multiple ', num2str(i), ': ', num2str(multiple)]);
+end
+
+
+QUESTION 5)
+% Define the vector
+v = [1, 2, 3, 4, 5];
+
+% Calculate the sum of elements in v
+sum_of_elements = sum(v);
+
+% Display the sum
+disp(['The sum of elements in v is: ' num2str(sum_of_elements)]);
