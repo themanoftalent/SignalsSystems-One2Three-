@@ -1,0 +1,31 @@
+% Mert Göksu - 201504024
+
+----------------------------------------------------------
+
+% Q1) 2nd power of a number
+
+x = 5;
+x = power(x,2);
+disp("Result :" + x);
+% Result :25
+
+----------------------------------------------------------
+
+% Q2) Squareroot of a number
+
+x = input("Enter a number to get square root of it: ");
+x = sqrt(x);
+disp("Square root of your number is: " + x);
+% Enter a number to get square root of it: 144
+% Square root of your number is: 12
+
+----------------------------------------------------------
+
+% Q3) Length of a character
+
+x = input("Give me a word to get length: ", "s");
+x = strlength(x);
+disp("Length of your word is: " + x);
+% Give me a word to get length: merhaba
+% Length of your word is: 7
+
