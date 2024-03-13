@@ -1,0 +1,37 @@
+1.
+x = 5;
+y = 3;
+result = x * y;
+disp(['The result of x multiplied by y is: ', num2str(result)]);
+
+2.
+a = 10;
+b = 3;
+sum_ab = a + b;
+diff_ab = a - b;
+prod_ab = a * b;
+quot_ab = a / b;
+disp(['Sum: ', num2str(sum_ab)]);
+disp(['Difference: ', num2str(diff_ab)]);
+disp(['Product: ', num2str(prod_ab)]);
+disp(['Quotient: ', num2str(quot_ab)]);
+
+3.
+num = input('Enter a number: ');
+if mod(num, 2) == 0
+    disp('Even');
+else
+    disp('Odd');
+end
+
+4.
+for i = 1:10
+    disp(['Multiple of 3: ', num2str(i*3)]);
+end
+
+
+5.
+v = 1:5;
+sum_v = sum(v);
+disp(['Sum of elements in v: ', num2str(sum_v)]);
+
