@@ -1,4 +1,4 @@
-
+%2111504001 EsmaNurArslan HW3
 function x = evenOdd(num)
     if mod(num,2) == 0
         fprintf ('The given number is EVEN');
