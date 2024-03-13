@@ -1,0 +1,7 @@
+%Calculate %25
+x = input('Give me a number to calculate 25% : ')
+hp25_1 = x * 25 / 100
+hp25_2 = x * 0.25
+hp25_3 = x / 4
+
+disp(['Result: ', num2str(hp25_1)]);
