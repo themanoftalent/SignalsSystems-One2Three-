@@ -1,3 +1,3 @@
 x=5;
 y=3;
-disp(x+y) 
+disp(x*y) 
