@@ -1,28 +1,28 @@
-function r = Quick_Sort(x)
+function retu = Quick_Sort(ValueInput)
 
-n = length(x) %Pivot
+leng = length(ValueInput) %Pivot
 
 %if only one element
-if n < 2
-    r = x
+if leng < 2
+    retu = ValueInput
     return;
 end
 
 %Partition for quicksort
-xp1 = [];
-xp2 = [];
+ValInp1 = [];
+ValInp2 = [];
 
-for i = 1:n-1
+for index = 1:leng-1
     
-    if x(i) < x(n) 
-        xp1 = [ xp1 x(i)]
+    if ValueInput(index) < ValueInput(leng) 
+        ValInp1 = [ ValInp1 ValueInput(index)]
 
     else
-        xp2 = [ xp2 x(i)]
+        ValInp2 = [ ValInp2 ValueInput(index)]
     end
 
 end
 
-r = [ Quick_Sort(xp1) x(n) Quick_Sort(xp2) ]
+retu = [ Quick_Sort(ValInp1) ValueInput(leng) Quick_Sort(ValInp2) ]
 
 end
