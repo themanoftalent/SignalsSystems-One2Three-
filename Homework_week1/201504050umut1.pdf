@@ -1,1 +1,40 @@
+Problem 1: Continuous-Time Signals and Systems
+% Define the continuous-time signal
+t = linspace(0, 1, 1000); % One period from 0 to 1
+x_t = 3*cos(2*pi*t) + 2*sin(4*pi*t);
+% Plot the waveform of x(t) over one period
+figure;
+plot(t, x_t);
+xlabel('Time (t)');
+ylabel('Amplitude');
+title('Continuous-Time Signal x(t)');
+grid on;
+% Determine the frequency components present in x(t)
+frequency_component_1 = 1 / (2*pi); % Frequency of the first term
+frequency_component_2 = 1 / (4*pi); % Frequency of the second term
+fprintf('Frequency component 1: %.2f Hz\n', frequency_component_1);
+fprintf('Frequency component 2: %.2f Hz\n', frequency_component_2);
+% Compute the average power of x(t) over one period
+T = 1 / (4*pi); % Period of the signal
+average_power = (1/T) * trapz(t, abs(x_t).^2); % Numerical integration
+fprintf('Average power of x(t) over one period: %.2f\n', average_power);
+Problem 2: Discrete-Time Signals and Systems
+% Define the discrete-time signal
+x_n = [1, -2, 3, -4, 5];
+% Determine the length of the signal
+signal_length = length(x_n);
+fprintf('Length of the signal: %d\n', signal_length);
+% Find the value of x[3]
+x_3 = x_n(3);
+fprintf('Value of x[3]: %d\n', x_3);
+% Compute the sum of all elements in the signal
+sum_elements = sum(x_n);
+fprintf('Sum of all elements in the signal: %d\n', sum_elements);
+% Calculate the energy of the signal
+energy = sum(abs(x_n).^2);
+fprintf('Energy of the signal: %d\n', energy);
 
+length of the signal :5
+value of x[3] = 3
+sum of all elements in signal : 3
+energy of the signal : 55
